@@ -7,3 +7,5 @@ It is framed in the ISIC 2018 Challenge, a public challenge that took place in 2
 
 A modified ad hoc version of ISIC DB 2018 was used in order to evaluate the proposal. The original version of the dataset is available here: https://challenge.isic-archive.com/data 
 
+
+![Alt text](./structures.png?raw=true "Local Attributes of a skin lesion")
