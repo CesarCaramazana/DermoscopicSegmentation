@@ -1,4 +1,4 @@
-# DermoscopicSegmentation
+# Dermoscopic Imaging Semantic Segmentation
 Local Attribute Segmentation of pigmented skin lesion images
 
 This project constitutes a bachelor thesis in Sound and Image Engineering, carried out during the first semester of 2021. 
