@@ -1,7 +1,7 @@
 # Dermoscopic Imaging Semantic Segmentation
-Local Attribute Segmentation of pigmented skin lesion images
+Local Attribute Segmentation of pigmented skin lesion images.
 
-This project constitutes a bachelor thesis in Sound and Image Engineering, carried out during the first semester of 2021. 
+*This project constitutes a bachelor thesis in Sound and Image Engineering, carried out during the first semester of 2021*. 
 
 It is framed in the ISIC 2018 Challenge, a public challenge that took place in 2018 and is available here: https://challenge.isic-archive.com/landing/2018
 
