@@ -15,7 +15,7 @@ Image source: https://dermoscopedia.org
 
 From the beginning, **U-Net** was considered as the starting point for our proposal. The original arquitecture was modified in order to fit the requirements of the ISIC dataset (output number of classes and input resolution), and Resnet101 was used as backbone (pre-trained in ImageNet). Additionally, the last volume of the encoder was incorporated an **Atrous Spatial Pyramid Pooling** block (ASPP), from Deeplab v3, with dilation rates 2, 3 and 4, which slighyly improved the results. The last implementation carried out was the replacement of Resnet101 by **Inception v3**, which parallelizes convolutions and significantly reduces the number of parameters, something important given the computational power limitations of Google Colab. The arquitecture is shown in the following figure:
 
-![arq](https://github.com/CesarCaramazana/DermoscopicSegmentation/blob/main/images/unet_inception.PNG>)
+![arq](https://github.com/CesarCaramazana/DermoscopicSegmentation/blob/main/images/unet_inception.PNG)
 
 
 The design of the **loss function** was approached with the highly pronounced class imbalance problem of ISIC DB in mind. We used Cross Entropy with class weights and tried out the Focal Loss for further penalization of easy samples (although the combination of both didn't provide better results than CE with weights alone). The coefficients are calculated as the inverse number of samples and normalized. 
@@ -37,5 +37,5 @@ We achieved an average Jaccard score of 0.0896 in the test set, and an average A
 
 Some examples of the predicted masks compared to the Ground Truth:
 
-<img src="https://github.com/CesarCaramazana/DermoscopicSegmentation/blob/main/images/output.png?raw=True" width = "700px">
+<img src="https://github.com/CesarCaramazana/DermoscopicSegmentation/blob/main/images/output.png?raw=True" width = "615px">
 
