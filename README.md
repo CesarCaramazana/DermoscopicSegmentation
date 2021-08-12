@@ -103,7 +103,7 @@ The notebook was connected to my Google Drive account, where the dataset was sto
 </code>
 </pre>
 
-*The dataset class <code> db_isic_Dataset(torch.utils.data.Dataset)</code> may need to be modified in order to fit the folder structure of your Google Drive. In the code, /db_isic is a subfolder of /My_Drive, so it is accessed via this path:*.
+*The dataset class <code>db_isic_Dataset(torch.utils.data.Dataset)</code> may need to be modified in order to fit the folder structure of your Google Drive. In the code, /db_isic is a subfolder of /My_Drive, so it is accessed via this path:* <code>/content/drive/My Drive/db_isic</code>. For example, in <code>db_isic_Dataset()</code> you may find:
 
 <pre>
 <code>  
@@ -113,8 +113,6 @@ The notebook was connected to my Google Drive account, where the dataset was sto
       self.dataDir = '/content/drive/My Drive/db_isic/train.txt' 
 </code>
 </pre>
-
-The text files with the indices of the data (train.txt, val.txt and test.txt) are not included in the original ISIC dataset, but are available in this repository. 
 
 The checkpoint paths also need to be manually specified. In my implementation, I saved the models in a folder called /Checkpoints, using .tar files.
 
@@ -128,4 +126,5 @@ optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
 </code>
 </pre>
 
+The text files with the indices of the data (train.txt, val.txt and test.txt) are not included in the original ISIC dataset, but they are available in this repository. 
 The loss function and the model arquitectue cells are also available in the Python files <code>model.py</code> and <code>loss.py</code>
