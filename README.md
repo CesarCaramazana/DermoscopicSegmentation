@@ -103,13 +103,11 @@ The notebook was synched to my Google Drive account, where the dataset was store
 *The dataset class <code> db_isic_Dataset()</code> may need to be modified in order to fit the folder structure of your Google Drive. In the code, /db_isic is a subfolder of /My_Drive, so it is accessed via this path:*.
 
 <pre>
-<code>
-  
+<code>  
   if(self.subset == 'train'):
       self.imgRoot = '/content/drive/My Drive/db_isic/ISIC-2017_Training_Data/'
       self.gtRoot = '/content/drive/My Drive/db_isic/ISIC-2017_Training_Part2_GroundTruth/gtann/'
-      self.dataDir = '/content/drive/My Drive/db_isic/train.txt'
-  
+      self.dataDir = '/content/drive/My Drive/db_isic/train.txt' 
 </code>
 </pre>
 
@@ -124,6 +122,7 @@ checkpoint_path = "/content/drive/My Drive/Checkpoints/model.tar"
 checkpoint = torch.load(checkpoint_path, map_location=device)
 model.load_state_dict(checkpoint['model_state_dict'])
 optimizer.load_state_dict(checkpoint['optimizer_state_dict']) 
-
 </code>
 </pre>
+
+The loss function and the model arquitectue cells are also available in the Python files <code>model.py</code> and <code>loss.py</code>
