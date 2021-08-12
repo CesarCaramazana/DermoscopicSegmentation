@@ -59,7 +59,21 @@ The code was fully implemented in a Google Colab notebook (unetInception_final.i
 <ul>
   <li> Matplotlib </li>
   <li> CV2 </li>
-  <li> torchvision </li>
-  <li> sklearn </li>
+  <li> Torchvision </li>
+  <li> Sklearn </li>
   <li> Numpy </li>
 </ul>
+
+The notebook was synched to my Google Drive account, where the dataset was stored, following this folder structure:
+
+<code>
+  db_isic/
+          train.txt
+          val.txt
+          test.txt
+          idx/
+            .mat
+          ISIC-2017_Validation_Data/
+          ISIC-2017_Validation_Data
+          
+</code>  
