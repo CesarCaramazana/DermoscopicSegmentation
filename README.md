@@ -54,7 +54,7 @@ The main line of future work is the shift to a **Weakly Supervised Learning** sc
 
 <h2> Code description </h2>
 
-The code was fully implemented in a Google Colab notebook (unetInception_final.ipynb), writen in PyTorch. The main libraries used are:
+The code was fully implemented in a Google Colab notebook <code>unetInception_final.ipynb</code>, writen in PyTorch. The main libraries used are:
 
 <ul>
   <li> Matplotlib </li>
@@ -64,7 +64,10 @@ The code was fully implemented in a Google Colab notebook (unetInception_final.i
   <li> Numpy </li>
 </ul>
 
-The notebook was synched to my Google Drive account, where the dataset was stored, following this folder structure:
+
+<h3>Dataset scheme</h3>
+
+The notebook was connected to my Google Drive account, where the dataset was stored, following this folder structure:
 
 <pre>
 <code>
@@ -113,7 +116,7 @@ The notebook was synched to my Google Drive account, where the dataset was store
 
 The text files with the indices of the data (train.txt, val.txt and test.txt) are not included in the original ISIC dataset, but are available in this repository. 
 
-The checkpoint paths also need to be manually specified. In my implementation, I saved the models in a folder called /Checkpoints, using .tar file extension.
+The checkpoint paths also need to be manually specified. In my implementation, I saved the models in a folder called /Checkpoints, using .tar files.
 
 <pre>
 <code>
