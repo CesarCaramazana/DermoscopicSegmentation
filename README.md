@@ -71,6 +71,31 @@ The notebook was synched to my Google Drive account, where the dataset was store
   db_isic/
       train.txt
       val.txt
+      test.txt
+      idx/
+          isic_2017.mat
+      
+      ISIC-2017_Training_Data/
+          ISIC_0000421.jpg
+          ...          
+      ISIC-2017_Training_Part2_GroundTruth/
+          gtann/
+              ISIC_0000421.mat
+              ...
+      ISIC-2017_Validation_Data/
+          ISIC_0006651.jpg
+          ...        
+      ISIC-2017_Validation_Part2_GroundTruth/
+          gtann/
+            ISIC_0006651.mat
+            ...
+      ISIC-2017_Test_v2_Data/
+          ISIC_0016072.jpg
+          ...
+      ISIC-2017_Test_v2_Part2_GroundTruth/
+          gtann/
+              ISIC_0016072.mat
+      
      
 </code>
 </pre>
