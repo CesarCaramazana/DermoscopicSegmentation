@@ -41,7 +41,7 @@ Some examples of the predicted masks (for each pair, the upper row) compared to 
 
 <img src="https://github.com/CesarCaramazana/DermoscopicSegmentation/blob/main/images/output.png?raw=True" width = "500px">
 
-*The columns represent the five labeled structures in this order: cysts, negative network, pigment network, straks and globules*.
+*The columns represent the five labeled structures in this order: cysts, negative network, pigment network, streaks and globules*.
 
 The IoU of "pigment network", the class with the most number of samples, is 0.25, a significant margin with respect to streaks, the class with the least number of samples, in which the model achieves an IoU score of 0.001 (almost any pixel is classified correctly). Dermoscopic images, as well as other types of medical imaging, have an intrinsic difficulty that forces us to adopt a defensive approach to the resolution of the problem ('compensate' for class imbalance, 'mitigate' small datasets, 'reduce' memory usage, etcetera). A qualitative and quantitative improvement in ISIC DB would of course return better results. 
 
