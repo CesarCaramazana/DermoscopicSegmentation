@@ -1,14 +1,14 @@
 # Dermoscopic Imaging Semantic Segmentation
-Local Attribute Segmentation of pigmented skin lesion images.
+
+<h1>Local Attribute Segmentation of pigmented skin lesion images </h1>
 
 *This project constitutes a bachelor thesis in Sound and Image Engineering, carried out during the first semester of 2021. The notebook is implemented in PyTorch*. 
 
 It is framed in the ISIC 2018 Challenge, a public challenge that took place in 2018 and is available here: https://challenge.isic-archive.com/landing/2018
 
-A modified ad hoc version of ISIC DB 2017 was used in order to evaluate the proposal, which was stored in my personal Google Drive account and mounted in the notebook. The folder structure is explained at the end of this README- The original version of the dataset is available here: https://challenge.isic-archive.com/data 
+A modified ad hoc version of ISIC DB 2017 was used in order to evaluate the proposal, which was stored in my personal Google Drive account and mounted in the notebook. The folder structure is explained at the end of this README. The original version of the dataset is available here: https://challenge.isic-archive.com/data 
 
-
-We propose a Fully Convolutional U-net like model with emphasis on the preprocessing of the images and the feature extraction path, that performs multiclass semantic segmentation in order to localize the local structures of a pigmented skin lesion. These structures are: milia-like cysts, pigment networks, negative networks, streaks and globules.   
+We propose a Fully Convolutional U-net like model with emphasis on the preprocessing of the images and the feature extraction path, that performs multiclass semantic segmentation in order to localize five local structures in a pigmented skin lesion dermoscopic image. These structures are: milia-like cysts, pigment networks, negative networks, streaks and globules.   
 ![Structures](https://github.com/CesarCaramazana/DermoscopicSegmentation/blob/main/images/structures.PNG)
 
 Image source: https://dermoscopedia.org
@@ -21,7 +21,6 @@ From the beginning, **U-Net** was considered as the starting point for our propo
 
 
 The design of the **loss function** was approached with the highly pronounced class imbalance problem of ISIC DB in mind. We used Cross Entropy with class weights and tried out the Focal Loss for further penalization of easy samples (although the combination of both didn't provide better results than CE with weights alone). The coefficients are calculated as the inverse number of samples and normalized. 
-
 
 The **preprocessing** of the images consists in three operational blocks: 
 
@@ -42,7 +41,7 @@ We achieved an average Jaccard score of 0.0896 in the test set, and an average A
 
 Some examples of the predicted masks (for each pair, the upper row) compared to the Ground Truth (lower row):
 
-<img src="https://github.com/CesarCaramazana/DermoscopicSegmentation/blob/main/images/output.png?raw=True" width = "500px">
+<img src="https://github.com/CesarCaramazana/DermoscopicSegmentation/blob/main/images/output.png?raw=True" width = "400px">
 
 *The columns represent the five labeled structures in this order: cysts, negative network, pigment network, streaks and globules*.
 
