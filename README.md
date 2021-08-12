@@ -100,7 +100,7 @@ The notebook was synched to my Google Drive account, where the dataset was store
 </code>
 </pre>
 
-*The dataset class <code> db_isic_Dataset() </code> may need to be modified in order to fit the folder structure of your Google Drive. In the code, /db_isic is a subfolder of /My_Drive, so it is accessed via this path:*.
+*The dataset class <code> db_isic_Dataset()</code> may need to be modified in order to fit the folder structure of your Google Drive. In the code, /db_isic is a subfolder of /My_Drive, so it is accessed via this path:*.
 
 <pre>
 <code>
@@ -112,3 +112,5 @@ The notebook was synched to my Google Drive account, where the dataset was store
   
 </code>
 </pre>
+
+The text files with the indices of the data (train.txt, val.txt and test.txt) are not included in the original ISIC dataset, but are available in this repository. 
