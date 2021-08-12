@@ -68,11 +68,11 @@ The notebook was synched to my Google Drive account, where the dataset was store
 
 <code>
   db_isic/
-          train.txt
-          val.txt
-          test.txt
-          idx/
-            .mat
+          \n train.txt
+          \n val.txt
+          \n test.txt
+          \n idx/
+            \n \t .mat
           ISIC-2017_Validation_Data/
           ISIC-2017_Validation_Data
           
