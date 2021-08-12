@@ -35,9 +35,15 @@ The output masks were **postprocessed** with morphological operations (erosion +
 - RESULTS
 
 
-We achieved an average Jaccard score of 0.0896 in the test set, and an average Area under the curve value of 0.6986. These results are relatively low (with respect to the proposals submitted to the ISIC Challenge: https://challenge.isic-archive.com/leaderboards/2018) due to the class imbalance problem and the limitations of memory usage of Colab. We couldn't work with a higher input resolution without compromising the batch size, so a more defensive approached was taken. However, the architecture has potential for dermoscopic image segmentation. Due to the visual characteristics of the database, the emphasis placed on the feature extraction path has been key in the advancement of the project, and so the model can be further used in a scenario where more computational resources are available.
+We achieved an average Jaccard score of 0.0896 in the test set, and an average Area under the curve value of 0.6986. These results are relatively low (with respect to the proposals submitted to the ISIC Challenge: https://challenge.isic-archive.com/leaderboards/2018) due to the class imbalance problem and the limitations of memory usage of Colab. We couldn't work with a higher input resolution without compromising the batch size. However, the architecture has potential for dermoscopic image segmentation. Due to the visual characteristics of the database, the emphasis placed on the feature extraction path has been key in the advancement of the project, and so the model can be further used in a scenario where more computational resources are available.
 
 Some examples of the predicted masks compared to the Ground Truth:
 
 <img src="https://github.com/CesarCaramazana/DermoscopicSegmentation/blob/main/images/output.png?raw=True" width = "500px">
+
+
+The IoU of "pigment network", the class with the most number of samples, is 0.25, a significant margin with respect to streaks, the class with the least number of samples, in which the model achieves an IoU score of 0.001 (almost any pixel is classified correctly). Dermoscopic images, as well as other types of medical imaging, have an intrinsic difficulty that forces us to adopt a defensive approach to the resolution of the problem ('compensate' for class imbalance, 'mitigate' small datasets, 'reduce' memory usage, etcetera). A qualitative and quantitative improvement in ISIC DB would of course return better results. 
+
+
+The main line of future work is the shift to a **Weakly Supervised Learning** scenario, in order to train the FCN with fewer (or none) ground truth labels.
 
