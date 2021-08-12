@@ -67,13 +67,14 @@ The code was fully implemented in a Google Colab notebook (unetInception_final.i
 The notebook was synched to my Google Drive account, where the dataset was stored, following this folder structure:
 
 <code>
+  <p>
   db_isic/
-          \n train.txt
-          \n val.txt
-          \n test.txt
-          \n idx/
-            \n \t .mat
+          train.txt
+          val.txt
+          test.txt
+          idx/
+            .mat
           ISIC-2017_Validation_Data/
           ISIC-2017_Validation_Data
-          
+  </p>        
 </code>  
