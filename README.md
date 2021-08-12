@@ -114,3 +114,16 @@ The notebook was synched to my Google Drive account, where the dataset was store
 </pre>
 
 The text files with the indices of the data (train.txt, val.txt and test.txt) are not included in the original ISIC dataset, but are available in this repository. 
+
+The checkpoint paths also need to be manually specified. In my implementation, I saved the models in a folder called /Checkpoints, using .tar file extension.
+
+<pre>
+<code>
+checkpoint_path = "/content/drive/My Drive/Checkpoints/model.tar"
+
+checkpoint = torch.load(checkpoint_path, map_location=device)
+model.load_state_dict(checkpoint['model_state_dict'])
+optimizer.load_state_dict(checkpoint['optimizer_state_dict']) 
+
+</code>
+</pre>
