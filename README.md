@@ -13,6 +13,8 @@ We propose a Fully Convolutional U-net like model with emphasis on the preproces
 
 Image source: https://dermoscopedia.org
 
+<h1> Model description </h1>
+
 From the beginning, **U-Net** was considered as the starting point for our proposal. The original arquitecture was modified in order to fit the requirements of the ISIC dataset (output number of classes and input resolution), and Resnet101 was used as backbone (pre-trained in ImageNet). Additionally, the last volume of the encoder was incorporated an **Atrous Spatial Pyramid Pooling** block (ASPP), from Deeplab v3, with dilation rates 2, 3 and 4, which slighyly improved the results. The last implementation carried out was the replacement of Resnet101 by **Inception v3**, which parallelizes convolutions and significantly reduces the number of parameters, something important given the computational power limitations of Google Colab. The arquitecture is shown in the following figure:
 
 ![arq](https://github.com/CesarCaramazana/DermoscopicSegmentation/blob/main/images/unet_inception.PNG)
