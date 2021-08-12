@@ -66,9 +66,11 @@ The code was fully implemented in a Google Colab notebook (unetInception_final.i
 
 The notebook was synched to my Google Drive account, where the dataset was stored, following this folder structure:
 
+<pre>
 <code>
   db_isic/
       train.txt
       val.txt
      
-</code>  
+</code>
+</pre>
