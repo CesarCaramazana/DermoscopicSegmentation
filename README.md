@@ -21,7 +21,7 @@ The proposed arquitecture (Unet [Inception v3] + Atrous Pyramid Pooling) is show
 
 We tackle ISIC DB class imabalance problem with the loss function. We used Cross Entropy with class weights and tried out the Focal Loss for further penalization of easy samples (although the combination of both didn't provide better results than CE with weights alone). The coefficients are calculated as the inverse number of samples and normalized. 
 
-The **preprocessing** of the images consists in three operational blocks, as shown in the figure below: 
+The **preprocessing** of the images consists in four operational blocks, as shown in the figure below: 
 
 <img src="https://github.com/CesarCaramazana/DermoscopicSegmentation/blob/main/images/preproc_pipeline.png?raw=True" width="731px">
 
